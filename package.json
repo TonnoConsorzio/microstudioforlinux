@@ -4,11 +4,11 @@
   "description": "Shell Electron per microstudio.dev ottimizzato per Linux",
   "main": "main.js",
   "scripts": {
-    "pack": "electron-builder --dir",
-    "dist": "electron-builder --linux",
-    "build:appimage": "electron-builder --linux AppImage",
-    "build:rpm": "electron-builder --linux rpm",
-    "build:deb": "electron-builder --linux deb",
+    "pack": "electron-builder --dir --publish=never",
+    "dist": "electron-builder --linux --publish=never",
+    "build:appimage": "electron-builder --linux AppImage --publish=never",
+    "build:rpm": "electron-builder --linux rpm --publish=never",
+    "build:deb": "electron-builder --linux deb --publish=never",
     "start": "electron .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -35,9 +35,8 @@
       "assets/**/*"
     ],
     "asar": true,
-    "publish": "never",
     "linux": {
-      "icon": "assets/icon.png",
+      "icon": "assets/logo/faviconlarge.png",
       "category": "Utility",
       "target": [
         "AppImage",

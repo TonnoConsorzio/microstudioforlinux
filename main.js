@@ -1,7 +1,9 @@
+const path = require("path");
 const { app, BrowserWindow, shell } = require("electron");
 
 const MICROSTUDIO_URL = "https://microstudio.dev/";
 const APP_TITLE = "Microstudio";
+const ICON_PATH = path.join(__dirname, "assets", "logo", "faviconlarge.png");
 const OFFLINE_HTML = `
 <!doctype html>
 <html lang="en">
@@ -127,6 +129,7 @@ function createWindow() {
     minWidth: 1024,
     minHeight: 640,
     title: APP_TITLE,
+    icon: ICON_PATH,
     backgroundColor: "#0f172a",
     autoHideMenuBar: true,
     useContentSize: true,
