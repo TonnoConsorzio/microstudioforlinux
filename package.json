@@ -1,6 +1,6 @@
 {
   "name": "microstudioforlinux",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Shell Electron per microstudio.dev ottimizzato per Linux",
   "main": "main.js",
   "scripts": {
