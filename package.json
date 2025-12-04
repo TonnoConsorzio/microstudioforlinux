@@ -1,0 +1,55 @@
+{
+  "name": "microstudioforlinux",
+  "version": "1.0.0",
+  "description": "Shell Electron per microstudio.dev ottimizzato per Linux",
+  "main": "main.js",
+  "scripts": {
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder --linux",
+    "build:appimage": "electron-builder --linux AppImage",
+    "build:rpm": "electron-builder --linux rpm",
+    "build:deb": "electron-builder --linux deb",
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "electron",
+    "microstudio"
+  ],
+  "author": "TonnoConsorzio",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TonnoConsorzio/microstudioforlinux.git"
+  },
+  "bugs": {
+    "url": "https://github.com/TonnoConsorzio/microstudioforlinux/issues"
+  },
+  "homepage": "https://github.com/TonnoConsorzio/microstudioforlinux#readme",
+  "build": {
+    "appId": "dev.microstudio.desktop",
+    "productName": "Microstudio for Linux",
+    "files": [
+      "main.js",
+      "package.json",
+      "assets/**/*"
+    ],
+    "asar": true,
+    "publish": "never",
+    "linux": {
+      "icon": "assets/icon.png",
+      "category": "Utility",
+      "target": [
+        "AppImage",
+        "deb",
+        "rpm"
+      ]
+    }
+  },
+  "dependencies": {
+    "electron": "^39.2.5"
+  },
+  "devDependencies": {
+    "electron-builder": "^26.0.12"
+  }
+}
