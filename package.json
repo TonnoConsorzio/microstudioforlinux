@@ -16,7 +16,10 @@
     "electron",
     "microstudio"
   ],
-  "author": "TonnoConsorzio",
+  "author": {
+    "name": "TonnoConsorzio",
+    "email": "alessiobellan@proton.me"
+  },
   "license": "ISC",
   "repository": {
     "type": "git",
@@ -37,6 +40,7 @@
     "asar": true,
     "linux": {
       "icon": "assets/logo/faviconlarge.png",
+      "maintainer": "TonnoConsorzio <alessiobellan@proton.me>",
       "category": "Utility",
       "target": [
         "AppImage",
